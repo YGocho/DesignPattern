@@ -5,15 +5,18 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/CommandPattern.cpp \
-../src/SysCommand_print.cpp 
+../src/SysCommand_print.cpp \
+../src/SysCommand_print2.cpp 
 
 OBJS += \
 ./src/CommandPattern.o \
-./src/SysCommand_print.o 
+./src/SysCommand_print.o \
+./src/SysCommand_print2.o 
 
 CPP_DEPS += \
 ./src/CommandPattern.d \
-./src/SysCommand_print.d 
+./src/SysCommand_print.d \
+./src/SysCommand_print2.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

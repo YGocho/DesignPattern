@@ -16,7 +16,7 @@
 class SysCommandRecieverImpl : public SysCommandReciever {
 public:
 	void Print(){
-		std::cout << "SysCommandReciever" << std::endl;
+		std::cout << "SysCommandRecieverImpl" << std::endl;
 	}
 };
 
