@@ -15,7 +15,7 @@
 class SysCommandPrint : public SysCommand {
 
 public:
-	int CommandExecute(void);
+	void CommandExecute(void);
 	void setReciever(SysCommandReciever* reciever);
 
 protected:

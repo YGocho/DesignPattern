@@ -8,10 +8,8 @@
 #include <iostream>
 #include "SysCommand_Print.hpp"
 
-int SysCommandPrint::CommandExecute(void){
+void SysCommandPrint::CommandExecute(void){
 	reciever->Print();
-
-	return 0;
 }
 
 void SysCommandPrint::setReciever(SysCommandReciever* receiver){

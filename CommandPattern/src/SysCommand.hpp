@@ -13,7 +13,7 @@
 class SysCommand {
 public:
 	virtual ~SysCommand(){};
-	virtual int CommandExecute(void) = 0;
+	virtual void CommandExecute(void) = 0;
 	virtual void setReciever(SysCommandReciever* reciever) = 0;
 };
 

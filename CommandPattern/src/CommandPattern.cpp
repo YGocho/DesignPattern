@@ -12,6 +12,7 @@
 #include "SysCommand_Print2.hpp"
 #include "SysCommandRecierverImpl.hpp"
 #include "SysCommandRecierverImpl2.hpp"
+#include "SysMacroCommand.hpp"
 
 using namespace std;
 
@@ -27,10 +28,26 @@ int main() {
 	SysCommandRecieverImpl2 receiverImpl2;
 
 	obj->setReciever(&receiverImpl);
-	obj->CommandExecute();
+//	obj->CommandExecute();
 
 	obj2->setReciever(&receiverImpl2);
-	obj2->CommandExecute();
+//	obj2->CommandExecute();
+
+	SysMacroCommand macroCommands;
+
+	macroCommands.Append(obj);
+	macroCommands.Append(obj2);
+
+	macroCommands.CommandExecute();
+
+	macroCommands.Undo();
+	macroCommands.CommandExecute();
+
+	macroCommands.Append(obj2);
+	macroCommands.CommandExecute();
+
+	macroCommands.Clear();
+	macroCommands.CommandExecute();
 
 	return 0;
 }
